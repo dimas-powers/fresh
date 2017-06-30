@@ -6,7 +6,6 @@ function getResult($file) {
 	foreach ($file as $string_arr) {
 		$numeric_arr[] = explode(' ', $string_arr);
 	}
-	echo '<pre>';
     foreach ($numeric_arr as &$number) {
 	    $number = array_filter($number, function ($value) {
             return preg_match('/\d+/', $value);
